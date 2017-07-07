@@ -38,10 +38,9 @@
         return false;
     };
 
-    let start = new Date().getTime();
+    console.time(n + '-queen');
     let result = solve();
-    let end = new Date().getTime();
-    console.log(n + '-queen: ' + (end - start) + 'ms');
+    console.timeEnd(n + '-queen');
     if (result) {
         let board = ''
         for (let i = 0; i < arr.length; i++) {
